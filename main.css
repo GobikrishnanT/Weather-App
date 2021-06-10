@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+.header{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    padding-left: 10px;
+}
+/* setting border color : */
+.mainContainer {
+    /* border: 1px solid black; */
+}
+.tempBox {
+    /* border: 3px solid orange; */
+}
+.windBox{
+    /* border: 3px solid violet; */
+}
+.foreCastMain{
+    /* border: 3px solid greenyellow; */
+    border-radius: 10px;
+}
+
+/* for understanding Purpose ads the border: */
+.innerForeCast_0{
+    border: 3px solid yellowgreen;
+    box-shadow: 12px 12px 15px -5px rgba(72, 236, 100, 0.56),
+                -12px -12px 15px -5px  rgba(72, 236, 100, 0.56);
+}
+.innerForeCast_1{
+    border: 3px solid blue;
+    box-shadow: -12px 12px 15px -5px rgba(92, 90, 223, 0.56),
+                12px -12px 15px -5px  rgba(92, 90, 223, 0.56);
+}
+.innerForeCast_2{
+    border: 3px solid deeppink;
+    box-shadow: 12px 12px 15px -5px rgba(223, 66, 202, 0.56),
+                -12px -12px 15px -5px rgba(223, 66, 202, 0.56);
+} 
+
+/* //Image Size Problem */
+.tempBox img{
+    width: 15%;
+    height: 4vh;
+}
+
+
+
+.mainContainer{
+    border: 3px solid black;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(12 , 1fr);
+    /* Here making two columns */
+    grid-template-rows: auto auto auto auto;
+    gap: 5px;
+
+}
+
+/* so specific Grid function */
+
+
+.foreCastMain{
+
+    display: grid;
+    grid-template-columns: repeat(12 , 1fr);
+    gap: 10px;
+    align-items: center;
+
+    grid-template-rows: auto auto auto;
+}
+
+
+/*Now we want to add the style for
+sepetate Element :::::*/
+
+.tempBox {
+    text-align: center;
+    padding-top: 2px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 12px 12px 15px -5px rgba(238, 44, 228, 0.56),
+    -12px -12px 15px -5px rgba(230, 79, 209, 0.56);
+}
+.headingTag{
+    border: 2px solid black;
+    height: 12vh;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 12px 12px 15px -5px rgb(0 , 0 , 0 , 0.56);
+}
+
+.tempBox img {
+    
+    border-radius: 10px;
+    box-shadow: 12px 12px 15px -5px rgb(0 , 0 , 0 , 0.56);
+}
+
+.windBox{
+    text-align: center;
+    padding: 4px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 12px 12px 15px -5px rgba(59, 228, 73, 0.56),
+    -12px -12px 15px -5px rgba(54, 219, 67, 0.56);
+}
+
+
+.innerForeCast_0 , .innerForeCast_1 , .innerForeCast_2{
+    border-radius: 10px;
+    margin: 10px;
+    height: 25vh;
+}
+
+
+/* Let start out rangeBar style */
+/* //Step 1 : For SimpleDayBox */
+.simpleDayBox {
+    color: red;
+    font-weight: bolder;
+    font-size: 20px;
+    width: 25%;
+    height: 4vh;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 12px 12px 15px -5px rgb(0 , 0 , 0 , 0.56);
+}
+
+/* //Step 2 innerMergerDiv */
+/* let make the slider part clear */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    border-radius: 5px;
+    height: 15px; /* Specified height */
+    margin: 5px;
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    
+  }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+
+  }
+
+  /* //Flexing the content inside the thermoBox: */
+  .innerForeCast_0 , .innerForeCast_1 , .innerForeCast_2{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      
+  }
+.mergerDiv{
+    width: 100%;
+    height: 12vh;
+    padding-right:10px;
+    transform: rotate(270deg);
+}
+.arrowShower{
+    width: 100%;
+    height: 20px;
+    background-color: yellow;
+    border: 2px solid white;
+    transform: rotate(90deg);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: relative;
+    left: -30px;
+    top: -20px;
+
+    box-shadow: 0px 8px 4px -5px rgb(0 , 0 , 0 , 0.85);
+
+}
+.arrow_2 {
+    font-size: 15px;
+}
+
+
+/* //Here we seperate the thermobox : */
+.thermoBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.thermoBox h1 {
+    font-size: 15px;
+    color: rgb(44, 44, 36);
+    margin: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.sliderThumb_1{
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 62% 100%, 60% 80%, 0% 80%); 
+    width: 17%;
+    height: 2vh;
+    border-radius: 9px;
+    position: relative;
+    background-color: rgb(71, 71, 2);
+    transform: rotate(180deg);
+    flex-basis: 25%;
+    
+}
+.sliderThumb_2{
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 62% 100%, 60% 80%, 0% 80%); 
+    width: 17%;
+    height: 2vh;
+    border-radius: 9px;
+    position: relative;
+    background-color: red;
+    transform: rotate(180deg);
+    flex-basis: 20%;
+
+}
+.corresFood{
+    margin-top: 4px;
+    width: 90%;
+    height: 48.5vh;
+    border-radius: 10px;
+    box-shadow: 12px 12px 15px -5px rgb(0 , 0 , 0 , 0.56);
+}
+
+/* //Heading Tag */
+.nameOfApp{
+    background: linear-gradient(45deg , rgb(109, 197, 231) , brown);
+    writing-mode:vertical-rl;
+    color: white;
+    text-shadow: 2px 2px 2px red;
+    border: 2px solid black;
+    grid-row: 1 / span 3;
+    text-align: center;
+    padding-right: 100px;
+    font-size: 50px;
+    letter-spacing: 3px;
+    border-radius: 15px;
+}
+
+@media (min-width : 200px) {
+    .tempBox img {
+        padding-top: 5px;
+        width: 90%;
+        height: max-content;
+    }
+    .nameOfApp{
+        display: none;
+    }
+    .tempBox {
+        grid-column: 1 / span 12;
+    }
+    .windBox {
+        grid-column: 1 / span 12;
+    }
+    .headingTag {
+        grid-column: 1 / span 12;
+
+    }
+    .foreCastMain {
+        grid-column: 1 / span 12;
+    }
+    .innerForeCast_0 , .innerForeCast_1 , .innerForeCast_2 {
+        grid-column: 1 / span 12;
+    }
+    .valueShower{
+        flex-basis: 90%;
+    }
+    .sliderThumb_1{
+        flex-basis: 10%;
+    }
+    .sliderThumb_2{
+        flex-basis: 10%;
+    }
+
+}
+
+@media (min-width : 760px) {
+ 
+    .tempBox img {
+        padding-top: 5px;
+        width: 90%;
+        height: max-content;
+    }
+
+    .nameOfApp{
+        display: none;
+    }
+
+    .tempBox {
+        grid-column: 1 / span 6;
+    }
+    .windBox {
+        grid-column: 7 / span 6;
+    }
+    .headingTag {
+        grid-column: 1 / span 12;
+    }
+    .foreCastMain {
+        grid-column: 1 / span 12;
+    }
+    .innerForeCast_0 {
+        grid-column: 1 / span 6;
+    }
+    .innerForeCast_1 {
+        grid-column: 4 / span 6;
+        grid-row: 2;
+    }
+    .innerForeCast_2 {
+        grid-column:  7 / span 6;
+        grid-row: 3;
+    }
+    .valueShower{
+        flex-basis: 80%;
+    }
+    .sliderThumb_1{
+        flex-basis: 20%;
+    }
+    .sliderThumb_2{
+        flex-basis: 20%;
+    }
+
+}
+
+/* //Extra Larger : */
+
+@media (min-width : 1024px) {
+    .tempBox img {
+        padding-top: 5px;
+        width: 90%;
+        height: max-content;
+    }
+    .nameOfApp{
+        display: block;
+        grid-column: 1 / span 2;
+    }
+    .tempBox {
+        grid-column: 3 / span 6;
+    }
+    .windBox {
+        grid-column: 9 / span 3;
+    }
+    .headingTag {
+        grid-column: 3 /span 9;
+    }
+    .foreCastMain {
+        grid-column: 3 / span 9;
+    }
+
+    .innerForeCast_0 {
+        grid-column: 1 / span 5;
+
+    }
+    .innerForeCast_1 {
+        grid-column: 8 / span 5;
+        grid-row: 1;
+    }
+    .innerForeCast_2 {
+        grid-column: 4 / span 6;
+        grid-row: 2;
+    }
+    .valueShower{
+        flex-basis: 90%;
+    }
+    .sliderThumb_1{
+        flex-basis: 10%;
+    }
+    .sliderThumb_2{
+        flex-basis: 10%;
+    }
+}
+
